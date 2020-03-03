@@ -43,7 +43,7 @@ stoplistFile <- paste(
 )
 stoplist <- readLines(
   stoplistFile,
-  encoding = "UTS=8"
+  encoding = "UTF-8"
 )
 corpus <- tm_map(corpus, removeWords, stoplist)
 corpus <- tm_map(corpus, stripWhitespace)
